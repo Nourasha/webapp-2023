@@ -1,7 +1,16 @@
+import { Response } from "cross-fetch"
+
 export type Response = {
   id: string
   answer: string
   score: number
+  category: string
+  questionId: string
+}
+const response: Response = {
+  id: ""
+  answer: ""
+  score: 1
   category: string
   questionId: string
 }

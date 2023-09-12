@@ -1,4 +1,4 @@
-import { CreateResponses, Faker } from "./types"
+import { CreateResponses, Faker, Response } from "./types"
 
 const fakeAnswers: string[] = [
   "GlitterGlo Lipstick",
@@ -21,10 +21,10 @@ const getRandomId = () => {
 
 // TODO: Oppgave 1 - Not implemented
 const faker: Faker = {
-  id,
-  answer,
-  score,
-  category,
+  id: getRandomId,
+  answer: () => getRandomItem<string>(fakeAnswers),
+  score:
+  category:
 }
 
 // TODO: Oppgave 1 - Not implemented

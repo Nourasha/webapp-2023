@@ -33,6 +33,7 @@
     "date-fns": "^2.30.0",
     "lucide-react": "^0.265.0",
     "next": "13.4.13",
+    "next-build-id": "^3.0.0",
     "next-safe-action": "^3.0.1",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
@@ -102,5 +103,10 @@
     "node": ">=18.13.0",
     "pnpm": ">=8.6.11"
   },
-  "packageManager": "pnpm@8.6.12"
+  "packageManager": "pnpm@8.6.12",
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

@@ -1,4 +1,4 @@
-import type { CreateResponses, Faker } from "./types"
+import type { CreateResponses, Faker, Response } from "./types"
 
 // Define an array of fake answer options.
 const fakeAnswers: string[] = [

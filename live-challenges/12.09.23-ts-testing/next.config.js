@@ -9,5 +9,4 @@ const config = {
     ignoreBuildErrors: !!process.env.CI,
   },
 }
-
 export default config

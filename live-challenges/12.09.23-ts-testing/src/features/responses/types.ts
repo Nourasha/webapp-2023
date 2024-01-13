@@ -1,3 +1,7 @@
+import { CreateResponseParams } from './types';
+import { createResponses } from '@/features/responses/createResponse';
+import { Response } from "cross-fetch"
+
 export type Response = {
   id: string
   answer: string
@@ -5,15 +9,13 @@ export type Response = {
   category: string
   questionId: string
 }
-
-// How the Response object will look like
-// const response: Response = {
-//   id: "1",
-//   answer: "1",
-//   score: 1,
-//   category: "1",
-//   questionId: "1",
-// }
+const response: Response = {
+  id: "",
+  answer: "",
+  score: 1,
+  category: "",
+  questionId: ""
+}
 
 export type Faker = {
   id: () => string
@@ -22,13 +24,6 @@ export type Faker = {
   answer: () => string
 }
 
-// How the Faker type will look like
-// const faker: Faker = {
-//   id: () => "",
-//   score: () => 1,
-//   category: () => "",
-//   answer: () => "",
-// }
 
 export type CreateResponseParams = {
   existingResponses?: Map<string, Response>
@@ -36,29 +31,20 @@ export type CreateResponseParams = {
   faker: Faker
 }
 
-// const faker: Faker = {
-//   id: () => "",
-//   score: () => 1,
-//   category: () => "",
-//   answer: () => "",
-// }
+const existingResponses: Map<string, Response> = new Map<string, Response>([["response-id", response]])
 
-// const response: Response = {
-//   id: "1",
-//   answer: "1",
-//   score: 1,
-//   category: "1",
-//   questionId: "1",
-// }
+const faker: Faker = {
+  id: () => "",
+  score: ()=> 1,
+  category: ()=> "",
+  answer: ()=> ""
+}
 
-// const existingResponses = new Map<string, Response>([["response-id", response]])
-
-// How the CreateResponseParams will be used
-// const createResponseParams: CreateResponseParams = {
-//   existingResponses,
-//   count: 10,
-//   faker,
-// }
+const createResponseParams: CreateResponseParams = {
+  existingResponses,
+  count: 10,
+  faker,
+}
 
 export type CreateResponses = (
   params: CreateResponseParams,
